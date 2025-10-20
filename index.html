@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+<style>
+.splide__slide {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.splide__slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.slide-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.slide-content {
+    position: relative;
+    z-index: 3;
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.school-logo {
+display: block;
+width: 350px;
+height: auto;
+max-height: 120px;
+}
+
+.logo-container {
+display: flex;
+align-items: center;
+justify-content: flex-start; 
+padding: 20px 40px;
+margin-right: auto;
+}
+</style>
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Living Waters Senior Secondary - Home</title>
+    <title>Magalanngwe Senior Secondary - Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Splide Carousel CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -20,11 +74,7 @@
 
             <div class="brand">
                 <div class="logo-container">
-                    <div class="logo-circle"></div>
-                </div>
-                <div class="brand-text">
-                    <div class="brand-name">Living Waters</div>
-                    <div class="brand-tagline">Senior Secondary</div>
+                    <img src="/gallery/magalanngwe-logo.png" alt="Magalanngwe Senior Secondary Logo" class="school-logo">
                 </div>
             </div>
 
@@ -33,7 +83,7 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="academics.html">Academics</a></li>
-                    <li><a href="faculty.html">Faculty</a></li>
+
                     <li><a href="admissions.html">Admissions</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
@@ -49,62 +99,63 @@
     </div>
 
     <!-- Hero Carousel -->
-    <section id="home" class="hero-carousel splide" aria-label="Living Waters School Carousel">
+    <section id="home" class="hero-carousel splide" aria-label="Magalanngwe School Carousel">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="splide__slide">
+                    <img src="/gallery/1.jpg" alt="Magalanngwe Senior Secondary School">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
-                        <h2>Excellence in Education Since 1985</h2>
-                        <p>Living Waters Senior Secondary is committed to nurturing young minds through academic excellence, character development, and holistic education.</p>
+                        <h2>Excellence in Education Since 1987</h2>
+                        <p>Magalanngwe Senior Secondary is committed to nurturing young minds through academic
+                            excellence, character development, and holistic education.</p>
                         <button class="slide-cta" onclick="window.location.href='about.html'">Learn More</button>
                     </div>
                 </li>
                 <li class="splide__slide">
+                    <img src="/gallery/2.jpg" alt="Students learning at Magalanngwe">
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
                         <h2>Preparing Students for a Bright Future</h2>
-                        <p>Our comprehensive curriculum and dedicated faculty ensure students are well-prepared for university and beyond.</p>
+                        <p>Our comprehensive curriculum and dedicated faculty ensure students are well-prepared for
+                            university and beyond.</p>
                         <button class="slide-cta" onclick="window.location.href='academics.html'">Explore Academics</button>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <img src="/gallery/3.jpg" alt="School facilities at Magalanngwe">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h2>A Community of Learners and Leaders</h2>
+                        <p>Join our vibrant school community where students develop leadership skills and lifelong
+                            friendships.</p>
+                        <button class="slide-cta" onclick="window.location.href='admissions.html'">Join Our Community</button>
+                    </div>
+                </li>
+                <li class="splide__slide">
+                    <img src="/gallery/41.jpg" alt="Magalanngwe campus view">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content">
+                        <h2>Quality Education in a Supportive Environment</h2>
+                        <p>Our modern facilities and dedicated staff create the perfect learning environment for student
+                            success.</p>
+                        <button class="slide-cta" onclick="window.location.href='contact.html'">Visit Our School</button>
                     </div>
                 </li>
             </ul>
         </div>
     </section>
 
-    <!-- Partner Schools/Organizations -->
-    <div class="logo-strip-container">
-        <div class="logo-marquee">
-            <div class="logo-track">
-                <div class="logo-item"><img src="gallery/logo-strips/university1.png" alt="Partner University 1"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/university2.png" alt="Partner University 2"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/education_dept.png" alt="Education Department"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/science_fair.png" alt="Science Fair Organization"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/sports_assoc.png" alt="Sports Association"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/arts_council.png" alt="Arts Council"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/tech_partner.png" alt="Technology Partner"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/community_partner.png" alt="Community Partner"></div>
-
-                <!-- Duplicated for seamless looping -->
-                <div class="logo-item"><img src="gallery/logo-strips/university1.png" alt="Partner University 1"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/university2.png" alt="Partner University 2"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/education_dept.png" alt="Education Department"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/science_fair.png" alt="Science Fair Organization"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/sports_assoc.png" alt="Sports Association"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/arts_council.png" alt="Arts Council"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/tech_partner.png" alt="Technology Partner"></div>
-                <div class="logo-item"><img src="gallery/logo-strips/community_partner.png" alt="Community Partner"></div>
-            </div>
-        </div>
-    </div>
-
     <main class="content">
         <!-- About Section -->
         <section id="about" class="section">
             <div class="intro-text">
-                <h2>About Living Waters</h2>
-                <p>Founded in 1985, Living Waters Senior Secondary has been at the forefront of secondary education, providing a nurturing environment where students can achieve their full potential.</p>
-                <p>Our school combines academic rigor with a strong emphasis on character development, ensuring our graduates are not only prepared for higher education but also equipped to become responsible, contributing members of society.</p>
+                <h2>About Magalanngwe</h2>
+                <p>Founded in 1987, Magalanngwe Senior Secondary has been at the forefront of secondary education,
+                    providing a nurturing environment where students can achieve their full potential.</p>
+                <p>Our school combines academic rigor with a strong emphasis on character development, ensuring our
+                    graduates are not only prepared for higher education but also equipped to become responsible,
+                    contributing members of society.</p>
                 <div style="text-align: center; margin-top: 30px;">
                     <button class="cta-button" onclick="window.location.href='about.html'">Discover Our Story</button>
                 </div>
@@ -116,15 +167,13 @@
             <h2 class="section-title">Explore Our School</h2>
             <div class="services-grid">
                 <div class="service-card" onclick="window.location.href='academics.html'">
+                    <img src="sale-3d-lettering.webp" alt="">
                     <h3 class="service-title">Academic Programs</h3>
-                    <p class="service-description">Discover our comprehensive curriculum designed to prepare students for university and beyond.</p>
+                    <p class="service-description">Discover our comprehensive curriculum designed to prepare students
+                        for College ,University and beyond.</p>
                 </div>
-                
-                <div class="service-card" onclick="window.location.href='faculty.html'">
-                    <h3 class="service-title">Our Faculty</h3>
-                    <p class="service-description">Meet our dedicated team of educators committed to student success.</p>
-                </div>
-                
+
+
                 <div class="service-card" onclick="window.location.href='admissions.html'">
                     <h3 class="service-title">Admissions</h3>
                     <p class="service-description">Learn about our admission process and how to join our community.</p>
@@ -137,8 +186,9 @@
     <footer>
         <div class="footer-content">
             <div class="footer-column">
-                <h3>About Living Waters</h3>
-                <p>Founded in 1985 with a commitment to educational excellence, Living Waters Senior Secondary has been shaping young minds for over three decades.</p>
+                <h3>About Magalanngwe</h3>
+                <p>Founded in 1987 with a commitment to educational excellence, Magalanngwe Senior Secondary has been
+                    shaping young minds for over three decades.</p>
             </div>
 
             <div class="footer-column">
@@ -146,27 +196,22 @@
                 <a href="index.html">Home</a>
                 <a href="about.html">About</a>
                 <a href="academics.html">Academics</a>
-                <a href="faculty.html">Faculty</a>
+
                 <a href="admissions.html">Admissions</a>
                 <a href="contact.html">Contact</a>
             </div>
 
             <div class="footer-column">
                 <h3>Contact Information</h3>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-                <a href="tel:+2764 536 5964">(064) 536-5964</a>
-                <a href="mailto:admin@livingwaters.edu.za">admin@livingwaters.edu.za</a>
-                <p>123 Education Avenue, Academic District, 1245</p>
+                <a href="tel:+27827147956"><i class="fa-solid fa-phone"></i> 082 714 7956</a>
+                <a href="mailto:MagalanngweSec@gmail.com"> <i class="fa-regular fa-envelope"></i>
+                    MagalanngweSec@gmail.com</a>
+                <p><i class="fa-solid fa-location-dot"></i> 227 Itsani Village, Thohoyandou Limpopo</p>
             </div>
         </div>
 
         <div class="copyright">
-            &copy; Living Waters Senior Secondary. All Rights Reserved.
+            &copy; Magalanngwe Senior Secondary. All Rights Reserved. Designed by Blessing Makumbane
         </div>
     </footer>
 
